@@ -3,17 +3,21 @@ import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import { cyan, deepOrange, orange, teal } from '@mui/material/colors'
 
 const theme = extendTheme({
+  trello: {
+    appBarHeight: '48px',
+    boardHeight: '58px',
+  },
   colorSchemes: {
     light: {
       palette: {
-        primary: deepOrange,
-        secondary: teal,
+        primary: teal,
+        secondary: deepOrange,
       },
     },
     dark: {
       palette: {
-        primary: orange,
-        secondary: cyan,
+        primary: cyan,
+        secondary: orange,
       },
     },
   },

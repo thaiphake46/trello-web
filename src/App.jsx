@@ -2,10 +2,9 @@ import './App.css'
 import { useColorScheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Select from '@mui/material/Select'
-import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
+import Container from '@mui/material/Container'
 import InputLabel from '@mui/material/InputLabel'
-import Typography from '@mui/material/Typography'
 import FormControl from '@mui/material/FormControl'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
@@ -35,7 +34,7 @@ function ModeSelect() {
         </MenuItem>
         <MenuItem value={'dark'}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <DarkModeIcon fontSize='small' /> Light
+            <DarkModeIcon fontSize='small' /> Dark
           </Box>
         </MenuItem>
         <MenuItem value={'system'}>
@@ -50,13 +49,42 @@ function ModeSelect() {
 
 function App() {
   return (
-    <>
-      <h1>NucMD</h1>
-      <ModeSelect />
-      <Typography variant='h1' gutterBottom>
-        h1. Heading
-      </Typography>
-    </>
+    <Container disableGutters maxWidth={false} sx={{ height: '100vh' }}>
+      <Box
+        sx={{
+          backgroundColor: 'primary.light',
+          width: '100%',
+          height: (theme) => theme.trello.appBarHeight,
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <ModeSelect />
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: 'primary.dark',
+          width: '100%',
+          height: (theme) => theme.trello.boardHeight,
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        Board bar
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: 'primary.main',
+          width: '100%',
+          height: (theme) =>
+            `calc(100vh - (${theme.trello.appBarHeight} + ${theme.trello.boardHeight}))`,
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        Board content
+      </Box>
+    </Container>
   )
 }
 
