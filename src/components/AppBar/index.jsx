@@ -31,7 +31,12 @@ const AppBar = () => {
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <AppsIcon sx={{ color: 'primary.main' }} />
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <SvgIcon sx={{ color: 'primary.main' }} component={TrelloIcon} inheritViewBox />
+          <SvgIcon
+            sx={{ color: 'primary.main' }}
+            fontSize='small'
+            component={TrelloIcon}
+            inheritViewBox
+          />
 
           <Typography
             variant='span'
@@ -60,12 +65,12 @@ const AppBar = () => {
 
         <Tooltip title='Notification'>
           <Badge color='secondary' variant='dot' sx={{ cursor: 'pointer' }}>
-            <NotificationsNoneRoundedIcon />
+            <NotificationsNoneRoundedIcon sx={{ color: 'primary.main' }} />
           </Badge>
         </Tooltip>
 
         <Tooltip title='Help'>
-          <HelpOutlineRoundedIcon sx={{ cursor: 'pointer' }} />
+          <HelpOutlineRoundedIcon sx={{ cursor: 'pointer', color: 'primary.main' }} />
         </Tooltip>
 
         <Profile />
