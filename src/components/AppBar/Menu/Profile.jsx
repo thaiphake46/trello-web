@@ -35,7 +35,7 @@ const Profile = () => {
           aria-expanded={open ? 'true' : void 0}
         >
           <Avatar
-            sx={{ width: 32, height: 32 }}
+            sx={{ width: 36, height: 36 }}
             src='https://avatars.githubusercontent.com/u/155084835?s=48&v=4'
             alt='User name'
           />
