@@ -15,6 +15,7 @@ import Recent from './Menu/Recent'
 import Starred from './Menu/Starred'
 import Template from './Menu/Template'
 import Profile from './Menu/Profile'
+import AddIcon from '@mui/icons-material/Add'
 
 const AppBar = () => {
   return (
@@ -57,7 +58,9 @@ const AppBar = () => {
           <Recent />
           <Starred />
           <Template />
-          <Button variant='outlined'>Create</Button>
+          <Button variant='outlined' startIcon={<AddIcon />}>
+            Create
+          </Button>
         </Box>
       </Box>
 
